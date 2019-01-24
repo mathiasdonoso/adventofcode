@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+
+	"github.com/mathiasdonoso/adventofcode/day1"
 )
 
 func handleError(err error) {
@@ -13,13 +15,10 @@ func handleError(err error) {
 }
 
 func main() {
-	data, err := ioutil.ReadFile("day1.txt")
+	data, err := ioutil.ReadFile("day1/day1.txt")
 	handleError(err)
 	str := string(data)
 
-	// Day 1 - normal
-	fmt.Println("Day 1 - normal:", InverseCaptcha(str))
-
-	// Day 1 - extra
-	fmt.Println("Day 1 - extra:", HalfwayAroundCaptcha(str))
+	fmt.Println("Day 1 - normal:", day1.InverseCaptcha(str))
+	fmt.Println("Day 1 - extra:", day1.HalfwayAroundCaptcha(str))
 }
