@@ -1,24 +1,8 @@
 package main
 
 import (
-	"fmt"
-	"io/ioutil"
-	"log"
 	"strconv"
 )
-
-func handleError(err error) {
-	if err != nil {
-		log.Fatal(err)
-	}
-}
-
-func main() {
-	data, err := ioutil.ReadFile("day1.txt")
-	handleError(err)
-	str := string(data)
-	fmt.Println(InverseCaptcha(str))
-}
 
 // InverseCaptcha Problem Day 1
 // The captcha requires you to review a sequence of digits (your puzzle input)
