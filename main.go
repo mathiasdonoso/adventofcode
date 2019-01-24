@@ -15,7 +15,7 @@ func handleError(err error) {
 }
 
 func main() {
-	data, err := ioutil.ReadFile("day1/day1.txt")
+	data, err := ioutil.ReadFile("day1/data.txt")
 	handleError(err)
 	str := string(data)
 
