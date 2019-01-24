@@ -6,6 +6,7 @@ import (
 	"log"
 
 	"github.com/mathiasdonoso/adventofcode/day1"
+	"github.com/mathiasdonoso/adventofcode/day2"
 )
 
 func handleError(err error) {
@@ -15,10 +16,18 @@ func handleError(err error) {
 }
 
 func main() {
-	data, err := ioutil.ReadFile("day1/data.txt")
-	handleError(err)
-	str := string(data)
+	var data []byte
+	var str string
+	var err error
 
+	data, err = ioutil.ReadFile("day1/data.txt")
+	handleError(err)
+	str = string(data)
 	fmt.Println("Day 1 - normal:", day1.InverseCaptcha(str))
 	fmt.Println("Day 1 - extra:", day1.HalfwayAroundCaptcha(str))
+
+	data, err = ioutil.ReadFile("day2/data.txt")
+	handleError(err)
+	str = string(data)
+	fmt.Println("Day 2 - normal:", day2.CorruptionChecksum(str))
 }
