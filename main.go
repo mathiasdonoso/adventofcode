@@ -30,4 +30,5 @@ func main() {
 	handleError(err)
 	str = string(data)
 	fmt.Println("Day 2 - normal:", day2.CorruptionChecksum(str))
+	fmt.Println("Day 2 - normal:", day2.DivisibleChecksum(str))
 }
