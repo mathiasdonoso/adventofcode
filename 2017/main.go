@@ -5,8 +5,8 @@ import (
 	"io/ioutil"
 	"log"
 
-	"github.com/mathiasdonoso/adventofcode/day1"
-	"github.com/mathiasdonoso/adventofcode/day2"
+	"github.com/mathiasdonoso/adventofcode/2017/day1"
+	"github.com/mathiasdonoso/adventofcode/2017/day2"
 )
 
 func handleError(err error) {
